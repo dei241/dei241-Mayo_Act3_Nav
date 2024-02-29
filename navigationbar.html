@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 5px;
+            width: 180px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+            border-radius: 3px;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #111010;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: gray;
+        }
+
+        nav a:hover {
+            background-color: #d6670c;
+            color: gray;
+        }
+
+        .active {
+            background-color: #d6670c;
+        }
+
+        .sub-menu {
+            display: none;
+        }
+
+        .active:hover .sub-menu {
+            display: block;
+            background-color: gray;
+            border-radius: 3px;
+            position: absolute;
+            width: 180px;
+            left: 187px;
+            top: 40px;
+        }
+
+        .sub-menu a:hover {
+            background-color: #d6670c;
+            color: gray;
+        }
+
+        .sub2 {
+            display: none;
+        }
+
+        .sub-menu:hover .sub2 {
+            display: block;
+            background-color: gray;
+            border-radius: 3px;
+            position: absolute;
+            left: 183px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <div class="active">
+        <a href="#">Product <i id="icon" class='bx bxs-right-arrow' style="padding-left: 80px; font-size: 10px;"></i></a>
+        <div class="sub-menu">
+           <a href="#">Product 1 <i id="icon" class='bx bxs-right-arrow' style="padding-left: 65px; font-size: 8px;"></i></a>
+           <div class="sub2">
+                <a href="#">SUB PRODUCT</a>
+                <a href="#">SUB PRODUCT</a>
+           </div>
+           <a href="#">Product 2 <i id="icon" class='bx bxs-right-arrow' style="padding-left: 65px; font-size: 8px;"></i></a>
+        </div>
+    </div>
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+</nav>
+
+</body>
+</html>
+
